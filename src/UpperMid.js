@@ -4,10 +4,10 @@ import {useState} from "react";
 import CardHorizontal from './CardHorizontal';
 function UpperMid() {
 
-    // const handleDelete=(soccer)=>{
-    //     const fiterdata=data.filter((se)=> se.name != soccer);
-    //     setData(fiterdata);
-    // }
+     const handleDelete=(soccer)=>{
+         const fiterdata=horData.filter((se)=> se.title != soccer);
+         setHordata(fiterdata);
+     }
 
     const[data,setData]=useState(
         [
@@ -21,7 +21,9 @@ function UpperMid() {
             {title:"Qatar", detail:"Football World Cup 2022 to be held in Qatar, Entire world is desperate", picture:"https://i.pinimg.com/736x/df/a4/d8/dfa4d855985684690eb5c689ce6847b8--doha-qatar.jpg"},
             {title:"World Cup 2022", detail:"Most astonishing event ever arranged for a football World Cup", picture:"https://i.pinimg.com/474x/8b/fd/c0/8bfdc0caa9db3d0bed87a4a51e197ea2.jpg"},
             {title:"Saudi Arabia", detail:"Saudi Arabia announces one day official leave to celebrate victory", picture:"https://www.worldbank.org/content/dam/photos/780x439/2022/feb-3/Saudi-Arabia-Riyadh.jpg"},
-            {title:"Elon Musk", detail:"Elon Musk wishes to buy Ronaldo's club", picture:"https://i.pinimg.com/736x/80/35/03/80350376d5c7b9aedd97e813e8de6c4c.jpg"}
+            {title:"Elon Musk", detail:"Elon Musk wishes to buy Ronaldo's club", picture:"https://i.pinimg.com/736x/80/35/03/80350376d5c7b9aedd97e813e8de6c4c.jpg"},
+            {title:"New Card 1", detail:"Most astonishing event ever arranged for a football World Cup", picture:"https://i.pinimg.com/474x/8b/fd/c0/8bfdc0caa9db3d0bed87a4a51e197ea2.jpg"},
+            {title:"New Card 2", detail:"Saudi Arabia announces one day official leave to celebrate victory", picture:"https://www.worldbank.org/content/dam/photos/780x439/2022/feb-3/Saudi-Arabia-Riyadh.jpg"}
         ]
     );
 
@@ -32,7 +34,7 @@ function UpperMid() {
                     <div style={{display:"inline-block"}}>
                         <CardVertical name={football.name} description={football.description} 
                         imgsrc={football.imgsrc}/>
-                        {/* <button onClick={(se)=>handleDelete(football.name)}>Delete</button> */}
+                        
                     </div>
 
                 ))
@@ -48,6 +50,7 @@ function UpperMid() {
                     <div style={{display:"inline-block"}}>
                         <CardHorizontal name={cup.title} description={cup.detail} 
                         imgsrc={cup.picture}/>
+                        <button onClick={(se)=>handleDelete(cup.title)}>Delete</button>
                     </div>
 
                 ))

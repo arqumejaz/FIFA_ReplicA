@@ -1,4 +1,5 @@
 import './Hovering.css'
+import {Link} from "react-router-dom";
 function Menu() {
     return (
         <div>
@@ -76,9 +77,12 @@ function Menu() {
         </li>
 		<li className="nav-item"><a className="nav-link" href="#"> Legal </a>
         <ul className="dropdown-menu" >
-			  <li><a className="dropdown-item" href="#" > Legal 1</a></li>
-			  <li><a className="dropdown-item" href="#" > Legal 2 </a></li>
-			  <li><a className="dropdown-item" href="#" > Legal 3 </a></li>
+                <Link to="/privacy">
+			  <li><a className="dropdown-item" href="#" > privacy</a></li>
+              </Link>
+              <Link to="/terms">
+			  <li><a className="dropdown-item" href="#" > terms </a></li>
+              </Link>
 		    </ul>
         </li>
 		<li className="nav-item">
